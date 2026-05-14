@@ -14,6 +14,6 @@ public class Entry
 
     public void Display()
     {
-        
+        Console.WriteLine($"Date: {_date} - Question: {_promptText} - Response: {_entryText}");
     }
 }
