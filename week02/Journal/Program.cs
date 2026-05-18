@@ -1,3 +1,14 @@
+// EXCEEDING REQUIREMENTS
+// 1. CSV Format: Instead of using a simple separator, 
+//    The journal is being saved as a proper .csv file that can be opened in Excel.
+//    "" and , are being used to format the CSV file correctly.
+//
+// 2. CSV Header: A header row is included ("Date,Question,Response")
+//    in the CSV file generated so the file can be read correctly when opened in Excel.
+//
+// 3. Auto Date: DateTime.Now is being used to automatically record
+//    the date of each entry without asking the user to type it or the need to be hardcoded.
+
 using System;
 
 class Program
@@ -14,6 +25,7 @@ class Program
         // Create an object of type Journal to hold the user's journal entries
         // Note: It is important to create the object outside of the while loop so it can be used for each option
         Journal userJournal = new Journal();
+        string fileName = "";
 
         while (option != "5")
         {
@@ -51,10 +63,17 @@ class Program
             else if (option == "3")
             {
                 // Load the journal
+                Console.WriteLine("What is the filename?");
+                fileName = Console.ReadLine();
+                userJournal.LoadFromFile(fileName);
+
             }
             else if (option == "4")
             {
                 // Save the journal
+                Console.WriteLine("What is the filename?");
+                fileName = Console.ReadLine();
+                userJournal.SaveToFile(fileName);
             }
 
             else {

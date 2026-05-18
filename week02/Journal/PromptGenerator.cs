@@ -7,7 +7,7 @@ public class PromptGenerator
 {
     //NOTE: In this part attributes are created
     // Create a random number generator to select a random prompt from the list
-    public Random randomNumber = new Random();
+    public Random _randomNumber = new Random();
     // Create a list of strings to hold the prompts
     public List<String> _prompts = new List<String>();
     
@@ -26,7 +26,7 @@ public class PromptGenerator
     public string GetRandomPrompt()
     {
         /// Get a random prompt from the list of prompts and return it using Count to get the number of prompts in the list and using the random number generator to select a random prompt from the list
-        int index = randomNumber.Next(0, _prompts.Count);
+        int index = _randomNumber.Next(0, _prompts.Count);
         // Return the random value from the prompt list, that will be a string value
         return _prompts[index];
     }
