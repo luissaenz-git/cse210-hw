@@ -1,7 +1,8 @@
 // EXCEEDING REQUIREMENTS
-// 1. CSV Format: Instead of using a simple separator, 
-//    The journal is being saved as a proper .csv file that can be opened in Excel.
-//    "" and , are being used to format the CSV file correctly.
+// 1. CSV Format: Instead of using a simple separator like,
+//    The journal is being saved using "" and , to format the file correctly.
+//    The user can save the file as a .csv file by typing the filename with the .csv extension,
+//    which allows the file to be opened in Excel.
 //
 // 2. CSV Header: A header row is included ("Date,Question,Response")
 //    in the CSV file generated so the file can be read correctly when opened in Excel.
