@@ -8,6 +8,9 @@ public class Scripture
     private List<Word> _words = new List<Word>();
     private string _text;
 
+    public Scripture ()
+    {}
+
     public Scripture (Reference reference, string text)
     {
         _reference = reference;
