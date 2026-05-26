@@ -11,19 +11,39 @@ public class Word
     }
 
     public void Hide()
-    {}
+    {
+        _isHidden = true;
+
+    }
 
     public void Show()
-    {}
+    {
+        _isHidden = false;
+    }
 
     public bool IsHidden()
     {
-        return false;
+        return _isHidden;
     }
 
     public string GetDisplayText()
     {
-        return "";
+        string hiddenText = "";
+        if (_isHidden == true)
+
+        // this will return smae lenght string than the word but with undersocres
+        // to do this we create a new string with underscores and the same lenght than the original word
+        {
+            foreach (char i in _text)
+            {
+                hiddenText = hiddenText + "_";
+            }
+            return hiddenText;
+        }
+        else
+        {
+            return _text;
+        }
     }
 
 
