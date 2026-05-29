@@ -29,7 +29,10 @@ public class Scripture
         Random randomNumber = new Random();
         int randomIndex = randomNumber.Next(0, _words.Count);
         int hiddenWords = 0;
-        while (hiddenWords < numberToHide)
+
+        //FIX: This condition verifies that numberToHide words were hidden or if there are no enough words to hide
+        // because almost all were hidden, hides the remaining ones
+        while (hiddenWords < numberToHide && IsCompletelyHidden() == false)
         {
             //Hide if it is not hidden
             if (_words[randomIndex].IsHidden() == false)
