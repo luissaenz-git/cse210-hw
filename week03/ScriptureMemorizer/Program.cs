@@ -2,7 +2,7 @@ using System;
 
 //Exceeding Requirements
 //A new class called ScriptureLibrary was implemented to read a text file with scriptures
-//This new class converts each line into a sctipture with a reference and verse(s) so then it can be used by
+//This new class converts each line into a scripture with a reference and verse(s) so then it can be used by
 //the main program. Additional there is Random method on this class that selects a random scripture from the .txt file
 //and returns to the main program to be the scripture that will be used to memorize.
 //Text file needs to be separated by a "|" so the porgram can differ and index it to assign reference and verse values.
