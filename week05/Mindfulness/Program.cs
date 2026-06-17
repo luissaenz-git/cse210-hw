@@ -4,6 +4,44 @@ class Program
 {
     static void Main(string[] args)
     {
+        int option = 0;
+        string menu = """ 
+        Menu Options:
+            1. Breathing Activity
+            2. Reflection Activity
+            3. Listing Activity
+            4. Quit
+        """;
+        BreathingActivity a1 = new BreathingActivity("Breathing Activity", "This activity will help you relax by walking you through breathing in and out slowly. Clear your mind and focus on your breathing.");
+        ReflectingActivity a2 = new ReflectingActivity("Reflecting Activity", "This activity will help you reflect on times when you have shown strength and resilience.");
+        ListingActivity a3 = new ListingActivity("Listing Activity", "This activity will help you reflect on the good things in your life.");
+
         Console.WriteLine("Hello World! This is the Mindfulness Project.");
+         while (option != 4)
+        {
+            Console.WriteLine(menu);
+            Console.Write("Select a choice from the menu: ");
+            option = int.Parse(Console.ReadLine());
+
+            if (option == 1)
+            {
+                a1.Run();
+            }
+            else if (option == 2)
+            {
+                a2.Run();
+            }
+            else if (option == 3)
+            {
+                a3.Run();
+            }
+            else if (option == 4)
+            {}
+            else
+            {   
+                Console.WriteLine("Invalid option. Please select a valid option from the menu.");
+            }
+        }
+
     }
 }
