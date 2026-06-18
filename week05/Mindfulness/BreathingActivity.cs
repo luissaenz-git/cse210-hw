@@ -5,18 +5,21 @@ public class BreathingActivity : Activity
 
     public void Run()
     {
-        Console.WriteLine("Welcome to the Breathing Activity.");
-        Console.WriteLine("");
-        Console.WriteLine($"{_description}");
-        Console.WriteLine("");
-        Console.Write("How long, in seconds, would you like to do this activity? ");
-        int duration = int.Parse(Console.ReadLine());
-        Console.WriteLine("Get ready...");
-        ShowSpinner(3);
+        DisplayStartingMessage();
+        int duration = _duration;
 
+        DateTime futureTime = DateTime.Now.AddSeconds(duration);
+        while (DateTime.Now <= futureTime)
+        {
+            Console.WriteLine("\n");
+            Console.Write( "Breathe in..." );
+            ShowCountdown(4, futureTime);
+            Console.WriteLine("");
+            Console.Write("Now Breathe out...");
+            ShowCountdown(4, futureTime); 
+        }
         
-
-       
+        DisplayEndingMessage();
 
     }
 }
